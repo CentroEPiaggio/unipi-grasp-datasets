@@ -1,0 +1,27 @@
+<launch>
+
+	<!-- Camera -->
+	<include file="$(find openni_launch)/launch/openni.launch" /> 
+
+	<!-- Phase-Space tracked objects -->
+	<include file="$(find phase_space)/launch/track_object.launch">
+	  	<arg name="object" value="star" />
+		<arg name="turn_rviz_on" value="False" /> 
+		<arg name="turn_phase_space_on" value="True"/>
+	</include>
+
+	<include file="$(find phase_space)/launch/track_object.launch">
+	  		<arg name="object" value="bracelet" />
+			<arg name="turn_phase_space_on" value="False"/>
+			<arg name="turn_rviz_on" value="False" />
+	</include>
+
+	<!-- Flexiglove -->
+
+	<!-- Synchronizer -->
+	<node pkg="collect" name="collectData_thimble_node" type="collectData_node_oneThimble" respawn="true" output="screen"/>
+
+ </launch>
+
+     
+     
