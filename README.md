@@ -27,7 +27,7 @@ Connect all devices. ToDo description.
 
 4. Upload the setup for the experiment with `roslaunch scenario1 uploadSetup.launch`.
 
-5. Setup the registration environment (ToDo).
+5. Setup the registration environment (ToDo). In the visualization you see processed information, however, only sensor data (raw and calibrated) is recorded in the bag files. Parameters are saved to disk.
 
 6. Perform and record the action. Subjects must:
 	- Play the hand at rest position and wait for 2 seconds (start recording).
@@ -38,6 +38,9 @@ Connect all devices. ToDo description.
 
 #### How to play the recorded data
 
-1. Download the [file]() containing all bag files and place it within the `data` folder.
+1. Download the [file]() containing all bag files and uncompress it in the `data` folder.
 
-2. Type `roslaunch scenario1 playData.launch file:=FILENAME`.
+2. Type `roslaunch scenario1 playData.launch file:=FILENAME`. This already loads the parameters used during the experiment.
+
+#### How to synchronize the recorded data for use
+
