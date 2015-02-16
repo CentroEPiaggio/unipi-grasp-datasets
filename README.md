@@ -8,16 +8,36 @@ This pacakge contains experiment protocols related to Work Package 2 within the 
 * [Asus/Kinect](http://wiki.ros.org/openni2_launch) (install from synaptic/apt-get recommended)
 * [F/T](https://github.com/CentroEPiaggio/force-torque-sensor) & [Intrinsic Tactile Toolbox](https://github.com/CentroEPiaggio/intrinsic-tactile-toolbox)
 * [SoftHand](https://github.com/CentroEPiaggio/pisa-iit-soft-hand)
-* [SensorGloves](https://github.com/CentroEPiaggio/sensor-gloves)
+* [Flexiforce Glove](https://github.com/CentroEPiaggio/flexiforce-glove)
 * [Calibration](https://github.com/CentroEPiaggio/calibration)
-
-## How to run, record, and play an experiment
 
 ## Datasets
 
-### Scenario 1: PhaseSpace/Asus/SoftHand/FlexiGlove
+### Scenario 1: [PhaseSpace](http://www.phasespace.com/)/[Asus](http://www.asus.com/Multimedia/Xtion_PRO_LIVE/)/[SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)/[FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
 
-Follow the instruction in the [calibration](https://github.com/CentroEPiaggio/calibration) package to calibrate the asus&phase space.
+#### Experiment protocol
 
-TODO: Brief description on the setup, what the subject were asked to perform the grasp, what objects were given, when the point cloud were recorded (e.g. at the begining and at the end of the grasp), explain the bag files, etc.
-The results are recorded in these [bag files]()
+Connect all devices. ToDo description.
+
+1. Follow the instruction in the [calibration](https://github.com/CentroEPiaggio/calibration) package for the asus-phasespace calibration.
+
+2. Select an object from the database.
+
+3. Perform a tracker-object calibration, instructions at [calibration](https://github.com/CentroEPiaggio/calibration).
+
+4. Upload the setup for the experiment with `roslaunch scenario1 uploadSetup.launch`.
+
+5. Setup the registration environment (ToDo).
+
+6. Perform and record the action. Subjects must:
+	- Play the hand at rest position and wait for 2 seconds (start recording).
+    - Grasp the object and lift it for 2 seconds.
+	- Replace the object on the table and go to the same rest position for 2 seconds (stop recording).
+
+7. Select another object and go to point 3 until all objects are grasped.
+
+#### How to play the recorded data
+
+1. Download the [file]() containing all bag files and place it within the `data` folder.
+
+2. Type `roslaunch scenario1 playData.launch file:=FILENAME`.

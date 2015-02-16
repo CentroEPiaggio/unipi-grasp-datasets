@@ -1,0 +1,27 @@
+<launch>
+
+	<!-- #### -->
+
+	<arg name="hand_name" default="soft_hand_right"/>
+	<arg name="file" default=""/>
+
+	<!-- #### -->
+
+    <!-- Flexiforce Glove and hand visualization -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+            <param name="use_gui" value="false"/>
+            <rosparam param="source_list">[/flexiforce/joint_states]</rosparam>
+    </node>
+
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find scenario1)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
+	<node name="hand_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+	<!-- customized rviz for the experiment -->
+	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find scenario1)/launch/config.rviz" output="screen"/>
+
+	<!-- #### -->
+
+	<!-- rosbag play commands -->
+
+
+</launch>
