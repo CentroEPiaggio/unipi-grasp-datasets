@@ -1,4 +1,4 @@
-# pacman-unipi-wp2
+# unipi-grasp-datasets
 
 This pacakge contains experiment protocols related to Work Package 2 within the PaCMan project at UNIPI partner.
 
