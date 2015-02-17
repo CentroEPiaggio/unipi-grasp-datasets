@@ -30,7 +30,7 @@
 		<arg name="depth_registration" value="true" />
 		<arg name="color_depth_synchronization" value="true" />
 	</include>
-	<node name="point_cloud_dropper" pkg="topic_tools" type="drop" args="/camera/depth_registered/points20 21"/>
+	<node name="point_cloud_dropper" pkg="topic_tools" type="drop" args="/camera/depth_registered/points 20 21"/>
 
 	<!-- Include the results from calibration -->
 	<include file="$(find calibration)/launch/asus_phase_space_broadcaster.launch"/>
