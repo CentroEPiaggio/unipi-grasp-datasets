@@ -1,17 +1,19 @@
 <launch>
 
+	<param name="use_sim_time" value="true"/>
+
 	<!-- #### -->
 
 	<arg name="hand_name" default="soft_hand_right"/>
-	<arg name="file" default=""/>
+	<arg name="experiment_name" default="aa"/>
 
 	<!-- #### -->
 
     <!-- Flexiforce Glove and hand visualization -->
 
     <include file="$(find flexiforce_glove)/launch/flexiforce_glove.launch">
-		<arg name="isBoardConnected" default="false"/>
-		<arg name="hand_name" default="$(arg hand_name)"/>
+		<arg name="isBoardConnected" value="false"/>
+		<arg name="hand_name" value="$(arg hand_name)"/>
 	</include>
 
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
@@ -27,7 +29,10 @@
 
 	<!-- #### -->
 
-	<!-- rosbag play commands -->
+	<!-- load parameters -->
+	<rosparam command="load" file="$(find scenario1)/data/$(arg experiment_name)/$(arg experiment_name).yaml" />
 
+	<!-- rosbag play commands -->
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find scenario1)/data/$(arg experiment_name)/$(arg experiment_name).bag"/>
 
 </launch>
