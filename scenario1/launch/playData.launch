@@ -8,6 +8,12 @@
 	<!-- #### -->
 
     <!-- Flexiforce Glove and hand visualization -->
+
+    <include file="$(find flexiforce_glove)/launch/flexiforce_glove.launch">
+		<arg name="isBoardConnected" default="false"/>
+		<arg name="hand_name" default="$(arg hand_name)"/>
+	</include>
+
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
             <param name="use_gui" value="false"/>
             <rosparam param="source_list">[/flexiforce/joint_states]</rosparam>

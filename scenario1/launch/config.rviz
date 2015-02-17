@@ -31,7 +31,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud2
 Visualization Manager:
   Class: ""
   Displays:
@@ -78,7 +78,7 @@ Visualization Manager:
       Size (Pixels): 5
       Size (m): 0.01
       Style: Points
-      Topic: /camera/depth_registered/points
+      Topic: /camera/depth_registered/points_drop
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -279,7 +279,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: wrist
+    Fixed Frame: camera_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -300,22 +300,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.63316
+      Distance: 0.584872
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.185759
-        Y: -0.100718
-        Z: 0.0555455
+        X: 0.184169
+        Y: 0.142935
+        Z: 0.0486135
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.285203
+      Pitch: -0.00479699
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.516971
+      Yaw: 2.83197
     Saved: ~
 Window Geometry:
   Displays:
