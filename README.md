@@ -43,7 +43,7 @@ Connect all devices. ToDo description.
 
 1. Download the [file]() containing all bag files and uncompress it in the `data` folder.
 
-2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=FILENAME`. This already loads the parameters used during the experiment.
+2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
 
 #### How to synchronize the recorded data for later use
 
