@@ -3,10 +3,10 @@
 
 	<xacro:include filename="$(find soft_hand_description)/model/soft_hand.urdf.xacro"/>
 
-		<link name="wrist"/>
+		<link name="hand"/>
 
-		<xacro:soft_hand parent="wrist" name="$(arg name)" withAdaptiveTransmission="true" useMimicTag="false" left="false">
-				<origin xyz="0.002 0.009 0.038" rpy="0 0 0"/>
+		<xacro:soft_hand parent="hand" name="$(arg name)" withAdaptiveTransmission="true" useMimicTag="false" left="false">
+				<origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
 		</xacro:soft_hand>
  
 </robot>

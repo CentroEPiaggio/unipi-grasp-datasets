@@ -13,7 +13,7 @@ echo "Recording will start in 5 seconds. After that you will receive the signal 
 echo "Saving experiment parameters..."
 rosparam dump $folder.yaml
 
-echo "Starting recording process, remember it will only record for 8 seconds..."
+echo "Openning window to record data, remember, only 8 seconds will be recorded..."
 
 sleep 5
 gnome-terminal --disable-factory --title="RECORDING" -x bash -c "rosbag record -O $folder.bag --duration=8 /camera/depth_registered/points_drop phase_space_markers tf /flexiforce/raw_values; bash" &
