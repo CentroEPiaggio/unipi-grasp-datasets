@@ -36,9 +36,7 @@ This pacakge contains experiment protocols on how to generate grasp datasets. Ev
 
 #### Experiment protocol
 
-Connect all devices. ToDo description.
-
-0. Work on the data directory `roscd scenario1/data`.
+0. Connect all devices and work on the data directory `roscd scenario1/data`.
 
 1. Follow the instruction in the [calibration](https://github.com/CentroEPiaggio/calibration) package for the asus-phasespace calibration.
 
