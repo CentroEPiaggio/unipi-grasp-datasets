@@ -12,6 +12,21 @@ This pacakge contains experiment protocols related to Work Package 2 within the 
 * [Calibration](https://github.com/CentroEPiaggio/calibration)
 * [PaCManObjectDatabse](https://github.com/pacman-project/pacman-object-database)
 
+## Guidelines to perform grasp experiments
+
+- If you use additional equipments or dependencies, please, add the link where to find them in the list above
+- Create a package of your scenario using `catkin_create_pkg <scnarioname>` (more arguments can be useful to fill the `package.xml`)
+- Follow the template of `scenario1`, create at least these files:
+	* `launch/uploadSetup.launch` to bring up all devices
+	* `data/startRecording.sh` to define your recording protocol
+	* `launch/playExperiment.launch` to play back recorded data
+- IMPORTANT: Do not commit your bag files to this repository! Upload your bag files to [CentroPiaggio server](http://131.114.31.70/) under the `datasets` folder as a single zip, share the file and provide a public link. If you don't have an account, ask to the [technical dept.](http://www.centropiaggio.unipi.it/administrative-staff.html) or your supervisor.
+- EVEN MORE IMPORTANT: Document your scenario in this README file with at least two sections:
+	* `Experiment protocol` to explain how the experiments were ran
+	* `How to play the recorded data` to describe how to play the data you obtained and provide download links to your bag files.
+
+
+
 ## Datasets
 
 ### Scenario 1: [PhaseSpace](http://www.phasespace.com/)/[Asus](http://www.asus.com/Multimedia/Xtion_PRO_LIVE/)/[SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)/[FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
@@ -46,4 +61,3 @@ Connect all devices. ToDo description.
 2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
 
 #### How to synchronize the recorded data for later use
-
