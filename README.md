@@ -18,14 +18,16 @@ This pacakge contains experiment protocols related to Work Package 2 within the 
 - Create a package of your scenario using `catkin_create_pkg <scnarioname>` (more arguments can be useful to fill the `package.xml`)
 - Follow the template of `scenario1`, create at least these files:
 	* `launch/uploadSetup.launch` to bring up all devices
-	* `data/startRecording.sh` to define your recording protocol
+	* `data/startRecording.sh` to define your recording protocol (if possible, record only sensor data and parameters)
 	* `launch/playExperiment.launch` to play back recorded data
 - IMPORTANT: Do not commit your bag files to this repository! Upload your bag files to [CentroPiaggio server](http://131.114.31.70/) under the `datasets` folder as a single zip, share the file and provide a public link. If you don't have an account, ask to the [technical dept.](http://www.centropiaggio.unipi.it/administrative-staff.html) or your supervisor.
 - EVEN MORE IMPORTANT: Document your scenario in this README file with at least two sections:
 	* `Experiment protocol` to explain how the experiments were ran
 	* `How to play the recorded data` to describe how to play the data you obtained and provide download links to your bag files.
-
-
+- The package `sync_data` allow you to synchronize your data either for recording (not recommended) or for data being played. To this end, you should:
+	* Create `msg/<scenarioname>.msg` file to define which type of message you want to synchronize
+	* Write a `src/<scnarioname>sync.cpp` node to subscribe to the topics you want to synchronize
+	* Create a `launch/<scenarioname>.launch` file to facilitate the use
 
 ## Experiments and Datasets
 
@@ -47,10 +49,15 @@ Connect all devices. ToDo description.
 
 5. Setup the registration environment (ToDo). In the visualization you see processed information, however, only sensor data (raw and calibrated) is recorded in the bag files. Point clouds are recorder using 20 of 21 messages at 30Hz. Parameters are saved to disk prior to recording to replicate the data later.
 
-6. Perform and record grasp actions. Subjects have 8 seconds to:
-	- Place the hand at rest position (`./startRecording`) and wait for 2 seconds.
-    - Grasp the object and lift it for 2 seconds.
-	- Replace the object on the table and go to the same rest position for 2 seconds (recording will shut down after 8 seconds).
+6. Perform and record grasp actions. The subjects are advised about the recording protocol. The actions are
+	- Place the hand at rest position
+	- `./startRecording`
+	- Wait 2 seconds
+	- Grasp the object and lift
+	- Wait 2 seconds
+	- Replace the object on the table
+	- Go to the same rest position
+	- Recording will shut down after 8 seconds
 
 7. Select another object and go to point 3 until all objects are grasped.
 
