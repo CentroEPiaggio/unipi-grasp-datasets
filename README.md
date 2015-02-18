@@ -1,12 +1,13 @@
 # unipi-grasp-datasets
 
-This pacakge contains experiment protocols related to Work Package 2 within the PaCMan project at UNIPI partner.
+This pacakge contains experiment protocols on how to generate grasp datasets. Everything is based on [ROS indigo](http://wiki.ros.org/indigo/Installation/Ubuntu)/[Ubunt 14.04](http://releases.ubuntu.com/14.04/).
 
 ## Equipment & Dependencies
 
 * [PhaseSpace](https://github.com/CentroEPiaggio/phase-space)
 * [Asus/Kinect](http://wiki.ros.org/openni2_launch) (install from synaptic/apt-get recommended)
-* [F/T](https://github.com/CentroEPiaggio/force-torque-sensor) & [Intrinsic Tactile Toolbox](https://github.com/CentroEPiaggio/intrinsic-tactile-toolbox)
+* [F/T](https://github.com/CentroEPiaggio/force-torque-sensor)
+* [Intrinsic Tactile Toolbox](https://github.com/CentroEPiaggio/intrinsic-tactile-toolbox)
 * [SoftHand](https://github.com/CentroEPiaggio/pisa-iit-soft-hand)
 * [Flexiforce Glove](https://github.com/CentroEPiaggio/flexiforce-glove)
 * [Calibration](https://github.com/CentroEPiaggio/calibration)
