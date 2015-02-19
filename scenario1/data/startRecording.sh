@@ -1,38 +1,48 @@
 #!/bin/bash
 
 clear
+echo "Type experiment name (use only letters and one single string of characters):"
+read folder </dev/tty
 
-echo "Type experiment name (use only letters and one single string of characters): "
-read folder
 echo "A folder named $folder will contain all data related to your experiment"
 mkdir $folder
 cd $folder
 
-echo "Recording will start in 5 seconds. After that you will receive the signal to start moving"
-
 echo "Saving experiment parameters..."
 rosparam dump $folder.yaml
 
-echo "Openning window to record data, remember, only 8 seconds will be recorded..."
+echo "====================================================================="
+echo "Type [ENTER] key when you are ready to start recording approach phase"
+echo "====================================================================="
+read k </dev/tty
 
-sleep 5
-gnome-terminal --disable-factory --title="RECORDING" -x bash -c "rosbag record -O $folder.bag --duration=8 /camera/depth_registered/points_drop phase_space_markers tf /flexiforce/raw_values; bash" &
+gnome-terminal --disable-factory --title="RECORDING_APPROACH" -x bash -c "rosbag record -O ${folder}_APP.bag /camera/depth_registered/points_drop phase_space_markers tf /flexiforce/raw_values; bash" &
 PID=$!
+echo "Recording approach..."
 
-sleep 2
-
-echo "----------------------- GO! ---------------------------------"
-
-sleep 8
-
+echo "============================================"
+echo "Type [ENTER] key when you are ready to grasp"
+echo "============================================"
+read key </dev/tty
 kill -9 $PID
 
-echo "----------------------- EXPERIMENT IS OVER ------------------"
+echo "Recording grasp..."
 
-sleep 3
+gnome-terminal --disable-factory --title="RECORDING_GRASP" -x bash -c "rosbag record -O ${folder}_GRP.bag /camera/depth_registered/points_drop phase_space_markers tf /flexiforce/raw_values; bash" &
+PID=$!
 
+echo "================================================="
+echo "Type [ENTER] key to stop recording the experiment"
+echo "================================================="
+read key </dev/tty
+kill -9 $PID
 
-echo "A bag file was generated with sensor data, check the readme the instructions to play it back."
-echo "Farewell"
+rosbag reindex ${folder}_*.bag.active -f -q
+mv ${folder}_APP.bag.active ${folder}_APP.bag
+mv ${folder}_GRP.bag.active ${folder}_GRP.bag
+rm ${folder}_APP.bag.orig.active ${folder}_GRP.bag.orig.active
 
-sleep 3
+echo "Bag files were generated with sensor data, check the readme for instructions to play them back."
+echo "Farewell!"
+
+sleep 1

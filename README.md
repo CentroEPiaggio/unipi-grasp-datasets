@@ -70,7 +70,8 @@ Notes on the recorded data:
 
 1. Download the [file](http://131.114.31.70:8080/share.cgi?ssid=096EZd5&fid=096EZd5&ep=LS0tLQ==) containing all bag files and uncompress it in the `data` folder.
 
-2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
+2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=NAME grasp_type:=TYPE`. This already loads the parameters used during the experiment. You need to specify both experiment_name argument and grasp_type. The first one specifies the subfolder inside data where to look for bag files and the latter specifies the type of recording: approach (pass 'APP') and grasping (pass 'GRP').
+For example to view the recording of jug_1 grasping one would type: `roslaunch scenario1 playExperiment.launch experiment_name:=jug_1 record_type:=GRP`
 
 If you want to have a specific information being published in a(several) topic(s), you can `ros topic YOUR_TOPIC` and hit `space` to pause the playback at the desired moment, and hit `s` to perform a tiny step on the playback. Check the terminal where you echoed the topic and take the required infromation, for instace, this procedure can be used to have a static grasp captured from the recording.
 
