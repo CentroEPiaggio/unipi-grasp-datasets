@@ -51,7 +51,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: wrist
+      Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -106,170 +106,170 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        soft_hand_right_index_distal_link:
+        hand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_index_distal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_index_fake_link1:
+        hand_index_fake_link1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        soft_hand_right_index_fake_link2:
+        hand_index_fake_link2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        soft_hand_right_index_fake_link3:
+        hand_index_fake_link3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        soft_hand_right_index_knuckle_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        soft_hand_right_index_middle_link:
+        hand_index_knuckle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_index_proximal_link:
+        hand_index_middle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_invisible_wire_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_little_distal_link:
+        hand_index_proximal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_little_fake_link1:
+        hand_invisible_wire_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        soft_hand_right_little_fake_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_little_fake_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_little_knuckle_link:
+        hand_little_distal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_little_middle_link:
+        hand_little_fake_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_little_fake_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_little_fake_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_little_knuckle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_little_proximal_link:
+        hand_little_middle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_middle_distal_link:
+        hand_little_proximal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_middle_fake_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_middle_fake_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_middle_fake_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_middle_knuckle_link:
+        hand_middle_distal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_middle_middle_link:
+        hand_middle_fake_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_middle_fake_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_middle_fake_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_middle_knuckle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_middle_proximal_link:
+        hand_middle_middle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_palm_link:
+        hand_middle_proximal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_ring_distal_link:
+        hand_palm_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_ring_fake_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_ring_fake_link2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_ring_fake_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_ring_knuckle_link:
+        hand_ring_distal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_ring_middle_link:
+        hand_ring_fake_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_ring_fake_link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_ring_fake_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_ring_knuckle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_ring_proximal_link:
+        hand_ring_middle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_thumb_distal_link:
+        hand_ring_proximal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_thumb_fake_link1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_thumb_fake_link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        soft_hand_right_thumb_knuckle_link:
+        hand_thumb_distal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        soft_hand_right_thumb_proximal_link:
+        hand_thumb_fake_link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_thumb_fake_link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        hand_thumb_knuckle_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wrist:
+        hand_thumb_proximal_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -300,22 +300,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.584872
+      Distance: 0.376107
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.184169
-        Y: 0.142935
-        Z: 0.0486135
+        X: 0.176727
+        Y: -0.0355039
+        Z: -0.00492381
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: -0.00479699
+      Pitch: -0.00979699
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.83197
+      Yaw: 3.09697
     Saved: ~
 Window Geometry:
   Displays:
