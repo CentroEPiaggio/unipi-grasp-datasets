@@ -32,9 +32,11 @@ You need to install them all.
 	* Write a `src/<scnarioname>sync.cpp` node to subscribe to the topics you want to synchronize
 	* Create a `launch/<scenarioname>.launch` file to facilitate the use
 
-## Experiments and Datasets
+## Scenarios and Datasets
 
 ### Scenario 1: [PhaseSpace](http://www.phasespace.com/)/[Asus](http://www.asus.com/Multimedia/Xtion_PRO_LIVE/)/[SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)/[FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
+
+This scenario is designed to be used within WP2 in the [PaCMan](http://www.pacman-project.eu/) project.
 
 #### Experiment protocol
 
