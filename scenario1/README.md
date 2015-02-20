@@ -1,4 +1,4 @@
-# Scenario 1: [PhaseSpace](http://www.phasespace.com/)/[Asus](http://www.asus.com/Multimedia/Xtion_PRO_LIVE/)/[SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)/[FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
+# Scenario 1
 
 This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-project.eu/) project using the following devices:
 * [PhaseSpace](http://www.phasespace.com/)
