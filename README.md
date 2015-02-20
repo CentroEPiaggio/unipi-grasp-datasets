@@ -36,4 +36,4 @@ You need to add them all to your catkin workspace to compile messages in the syn
 
 ### [Scenario 1](scenario1/)
 
-This scenario has been designed to fulfil requirements in WP2 of the [PaCMan](http://www.pacman-project.eu/) project. Check the [README](scenario1/README.md) file that defines the experiment protocol and how to reproduce the data.
+This scenario has been designed to fulfil requirements in WP2 of the [PaCMan](http://www.pacman-project.eu/) project. Check the [README](scenario1/README.md) file to see how to obtain the data, how was recorded, and how can it be played back.
