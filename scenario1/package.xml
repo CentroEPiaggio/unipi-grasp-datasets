@@ -11,7 +11,7 @@
 
   <!-- developed under the PaCMan project -->
   <url type="project">http://www.pacman-project.eu/</url>
-  <url type="repository">https://github.com/CentroEPiaggio/flexiforce-glove</url>
+  <url type="repository">https://github.com/CentroEPiaggio/unipi-grasp-datasets</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
