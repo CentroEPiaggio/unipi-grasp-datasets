@@ -5,6 +5,7 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 * [Asus](http://www.asus.com/Multimedia/Xtion_PRO_LIVE/)
 * [SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)
 * [FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
+* Handle for SoftHand
 
 
 ## Experiment protocol
