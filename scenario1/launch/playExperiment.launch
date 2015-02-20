@@ -6,7 +6,6 @@
 
 	<arg name="hand_name" default="soft_hand_right"/>
 	<arg name="experiment_name" default="aa"/>
-	<arg name="record_type" default="APP" />  <!-- APP or GRP -->
  
 	<!-- #### -->
 
@@ -34,6 +33,6 @@
 	<rosparam command="load" file="$(find scenario1)/data/$(arg experiment_name)/$(arg experiment_name).yaml" />
 
 	<!-- rosbag play commands -->
-	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find scenario1)/data/$(arg experiment_name)/$(arg experiment_name)_$(arg record_type).bag"/>
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find scenario1)/data/$(arg experiment_name)/$(arg experiment_name).bag"/>
 
 </launch>
