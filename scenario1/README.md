@@ -10,7 +10,7 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 
 ## Experiment protocol
 
-0. Connect all devices, use the links above to go directly to the instructions within.
+0. Connect all devices, use the links in the main [README](../README.md) above for instructions.
 
 1. Change the working directiory, open and work on the data directory `roscd scenario1/data`.
 
