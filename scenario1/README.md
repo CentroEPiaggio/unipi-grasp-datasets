@@ -44,8 +44,6 @@ Notes on the recorded data:
 
 If you want to have a specific information being published in a(several) topic(s), you can `ros topic YOUR_TOPIC` and hit `space` to pause the playback at the desired moment, and hit `s` to perform a tiny step on the playback. Check the terminal where you echoed the topic and take the required infromation, for instace, this procedure can be used to have a static grasp captured from the recording.
 
-## How to synchronize the recorded data
-
 ## How to segment the approach and grasp phase
 
 The joint angles of the hand are measured through the flexiforce-based glove. Raw data of the five sensors is recorded and published in the `/flexiforce/raw_data`. Write a listener to this topic and compute the norm of the vector of raw data, the moment it changes more than a threshold you get the segmentation point.
