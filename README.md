@@ -32,7 +32,7 @@ You need to add them all to your catkin workspace to compile messages in the syn
 	* Write a `src/<scnarioname>sync.cpp` node to subscribe to the topics you want to synchronize
 	* Create a `launch/<scenarioname>.launch` file to facilitate the use
 
-## Scenarios and Datasets
+## Scenarios
 
 ### [Scenario 1](scenario1/)
 
