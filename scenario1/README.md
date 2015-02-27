@@ -6,7 +6,9 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 * [SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)
 * [FlexiforceGlove](https://github.com/CentroEPiaggio/flexiforce-glove)
 * Handle for SoftHand
-
+ 
+The following figure shows the software infrastructure chosen for this scenario. Green connections represent PhaseSpace tracking, red ones the calibration steps and yellow ones represent data being recorded.
+<br> <img src="../media/scenario1.png" alt="scenario1" width="800px"/>
 
 ## Experiment protocol
 
@@ -30,7 +32,7 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 	- Replace the object on the table
 	- Go to the same rest position and wait until recording process is stopped automatically
 
-7. If you want to try a different grasp on the same object, go to point 6. If you want to change the object, go the second terminal you opened, kill that process, go to point 23
+7. If you want to try a different grasp on the same object, go to point 6. If you want to change the object, go the second terminal you opened, kill that process, then restart from point 4
 
 Notes on the recorded data:
  - Recall only raw sensor data is recorded in the bag files at their max frequency. 
