@@ -34,6 +34,6 @@ You need to add them all to your catkin workspace to compile messages in the syn
 
 ## Scenarios
 
-### [Scenario 1](scenario1/)
+### [Scenario 1](scenario1/): Human grasping using a handled Pisa/IIT SoftHand
 
 This scenario has been designed to fulfil requirements in WP2 of the [PaCMan](http://www.pacman-project.eu/) project. Check the [README](scenario1/README.md) file to see where to download the data, how was recorded, and how can it be played back.

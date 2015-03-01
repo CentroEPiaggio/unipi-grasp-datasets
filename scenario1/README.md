@@ -1,4 +1,4 @@
-# Scenario 1
+# Scenario 1: Human grasping using a handled Pisa/IIT SoftHand
 
 This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-project.eu/) project using the following devices:
 * [PhaseSpace](http://www.phasespace.com/)
