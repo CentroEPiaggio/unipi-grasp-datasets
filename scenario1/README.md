@@ -8,7 +8,7 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 * Handle for SoftHand
  
 The following figure shows the software infrastructure chosen for this scenario. Green connections represent PhaseSpace tracking, red ones the calibration steps and yellow ones represent data being recorded.
-<br> <img src="../media/scenario1.png" alt="scenario1" width="800px"/>
+<br> <img src="./media/scenario1.png" alt="scenario1" width="800px"/>
 
 ## Experiment protocol
 
