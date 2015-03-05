@@ -1,6 +1,6 @@
 # IROS2015 - submitted: Human grasping using a handled Pisa/IIT SoftHand
 
-This scenario has been designed to create the Grasp database necessary for the ``High-Level Planning for Dual Arm Goal-Oriented Tasks'' work submitted to IROS2015,  using the following devices:
+This scenario has been designed to create the Grasp database necessary for the ``High-Level Planning for Dual Arm Object Passing Tasks'' work submitted to IROS2015,  using the following devices:
 * [PhaseSpace](http://www.phasespace.com/)
 * [SoftHand](http://www.qbrobotics.com/#!softhand/c1njg)
 * Handle for SoftHand
@@ -10,9 +10,9 @@ This scenario has been designed to create the Grasp database necessary for the `
 
 The experiment is simple. Only a cylilnder is to be grasped as a test object for the paper. Several grasps were tried called bottom, bottom180, sideThumb, depending on the grasp used. 
 
-One experiment bag file contains several tries of the same grasp, so we can segment it later manually to select the best candidate pose to our High-level planner.
+Just type in one terminal `roslaunch iros2015_grasp_db uploadSetup.launch` and in another terminal `roscd iros2015_grasp_db/data`  and record as many defined grasps as you want by runnin `./startRecording.sh`.
 
-The recording procedure was stopped manually so bag file length is variable among them.
+The recording procedure was stopped manually so the bag file length is variable among the data. One experiment bag file contains several tries of the same grasp, so we can segment it later manually to select the best candidate poses for the high-level planner.
 
 Notes on the recorded data:
  - Recall only raw sensor data is recorded in the bag files at their max frequency plus `/tf`. 
