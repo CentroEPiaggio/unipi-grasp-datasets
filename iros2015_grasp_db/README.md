@@ -8,7 +8,6 @@ This scenario has been designed to create the Grasp database necessary for the `
 
 #### Experiment protocol
 
-
 The experiment is simple. Only a cylilnder is to be grasped as a test object for the paper. Several grasps were tried called bottom, bottom180, sideThumb, depending on the grasp used. 
 
 One experiment bag file contains several tries of the same grasp, so we can segment it later manually to select the best candidate pose to our High-level planner.
@@ -16,10 +15,8 @@ One experiment bag file contains several tries of the same grasp, so we can segm
 The recording procedure was stopped manually so bag file length is variable among them.
 
 Notes on the recorded data:
- - Recall only raw sensor data is recorded in the bag files at their max frequency. 
+ - Recall only raw sensor data is recorded in the bag files at their max frequency plus `/tf`. 
  - Recall that parameter for each grasp is saved to disk prior the recording to replicate the data processing. 
- - Point clouds are recorded using 20 of 21 messages at 30Hz, if you want to change this, modify the [`uploadSetup.launch`](scenario1/launch/uploadSetup.launch).
- - 
 
 #### How to play the recorded data
 
