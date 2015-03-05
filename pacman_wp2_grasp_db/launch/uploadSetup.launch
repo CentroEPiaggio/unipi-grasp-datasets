@@ -27,7 +27,7 @@
 	<include file="$(find phase_space)/launch/track_object.launch">
      	<arg name="object" value="hand" />
      	<arg name="turn_rviz_on" value="False"/>
-    	<arg name="turn_phase_space_on" value="True"/>   
+    	<arg name="turn_phase_space_on" value="True"/>
 	</include>
 	<include file="$(find phase_space)/launch/track_object.launch">
      	<arg name="object" value="star" />
