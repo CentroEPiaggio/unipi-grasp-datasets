@@ -37,7 +37,7 @@ The following figure shows the software infrastructure chosen for this scenario.
 Notes on the recorded data:
  - Recall only raw sensor data is recorded in the bag files at their max frequency. 
  - Recall that parameter for each grasp is saved to disk prior the recording to replicate the data processing. 
- - Point clouds are recorded using 1 out of 21 messages at 30Hz, if you want to change this, modify it in the [`uploadSetup.launch`](pacman_wp2_grasp_db/launch/uploadSetup.launch).
+ - Point clouds are recorded using 1 out of 21 messages at 30Hz, if you want to change this, modify it in the [`uploadSetup.launch`](launch/uploadSetup.launch).
 
 ## How to play the recorded data
 
