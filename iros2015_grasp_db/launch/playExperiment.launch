@@ -17,6 +17,8 @@
 
 	<!-- #### -->
 
+	<!-- NOTE: we made a mistake in the star parameters s, we don't load the experiment parameters, instead we compute tf from external parameters using the phase-space package -->
+	
 	<!-- load parameters -->
 	<!--rosparam command="load" file="$(find iros2015_grasp_db)/data/$(arg experiment_name)/$(arg experiment_name).yaml" /-->
 
@@ -25,7 +27,7 @@
 	<include file="$(find phase_space)/launch/track_object.launch">
      	<arg name="object" value="hand" />
      	<arg name="turn_rviz_on" value="False"/>
-    	<arg name="turn_phase_space_on" value="True"/>   
+    	<arg name="turn_phase_space_on" value="False"/> 
 	</include>
 	<include file="$(find phase_space)/launch/track_object.launch">
      	<arg name="object" value="cylinder" />
