@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>iros2015_grasp_db</name>
+  <version>0.0.0</version>
+  <description>The iros2015_grasp_db package</description>
+
+  <maintainer email="cjrosales@gmail.com">Carlos Rosales</maintainer>
+
+
+  <license>GPLv2</license>
+
+  <!-- developed under the PaCMan project -->
+  <url type="project">http://www.pacman-project.eu/</url>
+  <url type="repository">https://github.com/CentroEPiaggio/flexiforce-glove</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>

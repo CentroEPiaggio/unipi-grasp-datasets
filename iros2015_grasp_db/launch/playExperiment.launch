@@ -1,0 +1,39 @@
+<launch>
+
+	<param name="use_sim_time" value="true"/>
+
+	<!-- #### -->
+
+	<arg name="hand_name" default="soft_hand_right"/>
+	<arg name="experiment_name" default="aa"/>
+ 
+	<!-- #### -->
+
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find iros2015_grasp_db)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
+	<node name="hand_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+	<!-- customized rviz for the experiment -->
+	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find iros2015_grasp_db)/launch/config.rviz" output="screen"/>
+
+	<!-- #### -->
+
+	<!-- load parameters -->
+	<!--rosparam command="load" file="$(find iros2015_grasp_db)/data/$(arg experiment_name)/$(arg experiment_name).yaml" /-->
+
+	<!-- Phase Space and object tracking -->
+	<!-- this node already activates the phase space -->
+	<include file="$(find phase_space)/launch/track_object.launch">
+     	<arg name="object" value="hand" />
+     	<arg name="turn_rviz_on" value="False"/>
+    	<arg name="turn_phase_space_on" value="True"/>   
+	</include>
+	<include file="$(find phase_space)/launch/track_object.launch">
+     	<arg name="object" value="cylinder" />
+     	<arg name="turn_rviz_on" value="False"/>
+    	<arg name="turn_phase_space_on" value="False"/> <!-- previous node already start the system -->
+	</include>
+
+	<!-- rosbag play commands -->
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find iros2015_grasp_db)/data/$(arg experiment_name)/$(arg experiment_name).bag --topic phase_space_markers"/>
+
+</launch>
