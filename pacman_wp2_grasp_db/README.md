@@ -8,13 +8,13 @@ This scenario has been designed for WP2 in the [PaCMan](http://www.pacman-projec
 * Handle for SoftHand
  
 The following figure shows the software infrastructure chosen for this scenario. Green connections represent PhaseSpace tracking, red ones the calibration steps and yellow ones represent data being recorded.
-<br> <img src="./media/scenario1.png" alt="scenario1" width="800px"/>
+<br> <img src="./media/scenario1.png" alt="pacman_wp2_grasp_db" width="800px"/>
 
 ## Experiment protocol
 
 0. Connect all devices, use the links in the main [README](../README.md) above for instructions.
 
-1. Change the working directiory, open and work on the data directory `roscd scenario1/data`.
+1. Change the working directiory, open and work on the data directory `roscd pacman_wp2_grasp_db/data`.
 
 2. Calibrate the asus/phasespace sytems. instructions are in the [README](https://github.com/CentroEPiaggio/calibration/blob/master/README.md) of the [calibration](https://github.com/CentroEPiaggio/calibration) package.
 
@@ -22,7 +22,7 @@ The following figure shows the software infrastructure chosen for this scenario.
 
 4. Calibrate a knwon tracker with the object, instructions are in the [README](https://github.com/CentroEPiaggio/calibration/blob/master/README.md) of the [calibration](https://github.com/CentroEPiaggio/calibration) package.
 
-5. Upload the setup for the experiment, open a different terminal and type `roslaunch scenario1 uploadSetup.launch`, and go back to initial terminal. A window should open that allow you to see the processing of the data online.
+5. Upload the setup for the experiment, open a different terminal and type `roslaunch pacman_wp2_grasp_db uploadSetup.launch`, and go back to initial terminal. A window should open that allow you to see the processing of the data online.
 
 6. Perform and record grasp actions. The subjects are advised about the recording protocol. The actions are
 	- Place the hand at rest position
@@ -37,13 +37,13 @@ The following figure shows the software infrastructure chosen for this scenario.
 Notes on the recorded data:
  - Recall only raw sensor data is recorded in the bag files at their max frequency. 
  - Recall that parameter for each grasp is saved to disk prior the recording to replicate the data processing. 
- - Point clouds are recorded using 1 out of 21 messages at 30Hz, if you want to change this, modify it in the [`uploadSetup.launch`](scenario1/launch/uploadSetup.launch).
+ - Point clouds are recorded using 1 out of 21 messages at 30Hz, if you want to change this, modify it in the [`uploadSetup.launch`](pacman_wp2_grasp_db/launch/uploadSetup.launch).
 
 ## How to play the recorded data
 
 1. Download the [file](http://131.114.31.70:8080/share.cgi?ssid=0ERQVxL&fid=0ERQVxL&ep=LS0tLQ==) containing all bag files and uncompress it in the `data` folder.
 
-2. Type `roslaunch scenario1 playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
+2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
 
 If you want to have a specific information being published in a(several) topic(s), you can `ros topic YOUR_TOPIC` and hit `space` to pause the playback at the desired moment, and hit `s` to perform a tiny step on the playback. Check the terminal where you echoed the topic and take the required infromation, for instace, this procedure can be used to have a static grasp captured from the recording.
 
