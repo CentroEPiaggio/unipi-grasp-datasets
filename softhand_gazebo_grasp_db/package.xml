@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>softhand_gazebo_grasp_db</name>
+  <version>0.0.0</version>
+  <description>The softhand_gazebo_grasp_db package</description>
+
+  <maintainer email="carlos.rosales@for.unipi.it">Carlos Rosales</maintainer>
+  <maintainer email="manuel.bonilla@centropiaggio.unipi.it">Manuel Bonilla</maintainer>
+  <maintainer email="hamal.marino@centropiaggio.unipi.it">Hamal Marino</maintainer>
+
+  <license>GPLv2</license>
+
+  <!-- developed under the PaCMan project -->
+  <url type="project">http://www.pacman-project.eu/</url>
+  <url type="repository">https://github.com/CentroEPiaggio/unipi-grasp-datasets</url>
+
+  <author email="carlos.rosales@for.unipi.it">Carlos Rosales</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>

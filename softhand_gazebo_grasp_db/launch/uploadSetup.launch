@@ -1,0 +1,34 @@
+<launch>
+
+	<!-- this launch file upload the pre-grasp position in simulation, then you must send the close command by hand or with a batch script, this must be explained in the README -->
+
+	<param name="robot_description" command="$(find xacro)/xacro.py $(find softhand_gazebo_grasp_db)/urdf/right_hand.urdf.xacro" />
+	<node name="hand_spawner" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model right_hand -x 0 -y 0 -z 0.32 -R 0.9 -P 0.9 -Y 0" respawn="false" output="screen"/>
+
+	<param name="cylinder_description" command="$(find xacro)/xacro.py $(find softhand_gazebo_grasp_db)/urdf/cylinder.urdf.xacro" />
+	<node name="cylinder_spawner" pkg="gazebo_ros" type="spawn_model" args="-param cylinder_description -urdf -model cylinder -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" respawn="false" output="screen"/>
+
+	<!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find soft_hand_description)/worlds/simple_environment.world"/>
+		<arg name="paused" value="false"/>
+		<arg name="use_sim_time" value="true"/>
+		<arg name="gui" value="true"/>
+		<arg name="headless" value="true"/>
+		<arg name="debug" value="false"/>
+  	</include>
+
+  	<!-- Load joint controller configurations from YAML file to parameter server -->
+  	<rosparam file="$(find softhand_gazebo_grasp_db)/config/right_hand_controller.yaml" command="load"/>
+
+  	<!-- load position controllers -->
+  	<node ns="/right_hand" name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen"  args="joint_state_controller hand_synergy_joint_position_controller"/>
+
+  	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+  	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<rosparam param="source_list">[/soft_hand/joint_states]</rosparam>
+	</node>
+
+</launch>
