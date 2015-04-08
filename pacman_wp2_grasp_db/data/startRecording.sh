@@ -11,13 +11,13 @@ cd $folder
 echo "Saving experiment parameters..."
 rosparam dump $folder.yaml
 
-sleep 1
-
+echo "Press <enter> key to start recording for 15 seconds"
+read folder </dev/tty
 echo "============================================================================================"
 echo "                                        GO!!!"
 echo "============================================================================================"
 
-gnome-terminal --disable-factory --title="RECORDING" -x bash -c "rosbag record -O ${folder}.bag --duration=15 /camera/depth_registered/points_drop phase_space_markers tf /flexiforce/raw_values; bash" &
+gnome-terminal --disable-factory --title="RECORDING" -x bash -c "rosbag record -O ${folder}.bag --duration=15 /cloud_stream /video_stream phase_space_markers tf /flexiforce/raw_values; bash" &
 PID=$!
 echo "Recording..."
 echo "15"
