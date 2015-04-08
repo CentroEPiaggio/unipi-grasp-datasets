@@ -11,7 +11,8 @@ cd $folder
 echo "Saving experiment parameters..."
 rosparam dump $folder.yaml
 
-echo "Press <enter> key to start recording for 15 seconds"
+
+echo "Press <enter> key to start recording for 10 seconds"
 read folder </dev/tty
 echo "============================================================================================"
 echo "                                        GO!!!"
@@ -54,8 +55,6 @@ sleep 1
 echo "============================================================================================"
 echo "                      DONE Recording, Experiment is finished"
 echo "============================================================================================"
-
-kill -9 $PID
 
 echo "Bag files were generated with sensor data, check the readme for instructions to play them back."
 echo "Farewell!"

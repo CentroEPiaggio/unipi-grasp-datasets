@@ -21,18 +21,18 @@
             <rosparam param="source_list">[/flexiforce/joint_states]</rosparam>
     </node>
 
-    <param name="robot_description" command="$(find xacro)/xacro.py $(find pacman_wp2_grasp_db)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find pacman_wp2_db)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
 	<node name="hand_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
 	<!-- customized rviz for the experiment -->
-	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find pacman_wp2_grasp_db)/launch/config.rviz" output="screen"/>
+	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find pacman_wp2_db)/launch/config.rviz" output="screen"/>
 
 	<!-- #### -->
 
 	<!-- load parameters -->
-	<rosparam command="load" file="$(find pacman_wp2_grasp_db)/data/$(arg experiment_name)/$(arg experiment_name).yaml" />
+	<rosparam command="load" file="$(find pacman_wp2_db)/data/$(arg experiment_name)/$(arg experiment_name).yaml" />
 
 	<!-- rosbag play commands -->
-	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find pacman_wp2_grasp_db)/data/$(arg experiment_name)/$(arg experiment_name).bag"/>
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find pacman_wp2_db)/data/$(arg experiment_name)/record.bag"/>
 
 </launch>
