@@ -39,9 +39,9 @@
   <include file="$(find scene_filter_node)/launch/scene_filter_phase_space.launch" />
 
 	<!-- take only half messages from point clouds -->
-  <node name="point_cloud_dropper" pkg="topic_tools" type="drop" args="/scene_filter/scene 1 2 /cloud_stream"/>
+  <node name="point_cloud_dropper" pkg="topic_tools" type="drop" args="/scene_filter/scene 8 10 /cloud_stream"/>
 	<!-- take only half messages from rgb stream -->
-  <node name="video_dropper" pkg="topic_tools" type="drop" args="/camera/image_raw 1 2 /video_stream"/>
+  <node name="video_dropper" pkg="topic_tools" type="drop" args="/camera/image_raw 8 10 /video_stream"/>
 
 	<!-- Include the results from calibration -->
 	<include file="$(find calibration)/launch/asus_phase_space_broadcaster.launch"/>
