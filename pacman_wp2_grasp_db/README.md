@@ -41,9 +41,9 @@ Notes on the recorded data:
 
 ## How to play the recorded data
 
-1. Download the [file](http://131.114.31.70:8080/share.cgi?ssid=0ERQVxL&fid=0ERQVxL&ep=LS0tLQ==) containing all bag files and uncompress it in the `data` folder.
+1. Download grasp database from [here](http://131.114.31.70:8080/share.cgi?ssid=0m6oYnX). Uncompress the archives it in the `data` folder. Each subdirectory created represents a single grasp record, the name of such subdirectory is the name of the grasp that needs to be specified in the next step.
 
-2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch name:=NAME`. This already loads the parameters used during the experiment.
+2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch name:=NAME`. Where `NAME` is the grasp record name you want to view. This command already loads the parameters used during the experiment.
 
 If you want to have a specific information being published in a(several) topic(s), you can `ros topic YOUR_TOPIC` and hit `space` to pause the playback at the desired moment, and hit `s` to perform a tiny step on the playback. Check the terminal where you echoed the topic and take the required infromation, for instace, this procedure can be used to have a static grasp captured from the recording.
 
