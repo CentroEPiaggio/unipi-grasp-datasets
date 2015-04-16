@@ -12,7 +12,7 @@
             <rosparam param="source_list">[/flexiforce/joint_states]</rosparam>
     </node>
 
-    <param name="robot_description" command="$(find xacro)/xacro.py $(find pacman_wp2_grasp_db)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find pacman_wp2_db)/urdf/hand.urdf.xacro name:=$(arg hand_name)" />
 	<node name="hand_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
 	<include file="$(find flexiforce_glove)/launch/flexiforce_glove.launch">
@@ -50,6 +50,6 @@
 	<!-- Data synchronizer -->
 
 	<!-- customized rviz for the experiment -->
-	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find pacman_wp2_grasp_db)/launch/config.rviz" output="screen"/>
+	<node name="viz" pkg="rviz" type="rviz" respawn="false" args="-d $(find pacman_wp2_db)/launch/config.rviz" output="screen"/>
 
 </launch>
