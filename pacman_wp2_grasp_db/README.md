@@ -43,7 +43,7 @@ Notes on the recorded data:
 
 1. Download the [file](http://131.114.31.70:8080/share.cgi?ssid=0ERQVxL&fid=0ERQVxL&ep=LS0tLQ==) containing all bag files and uncompress it in the `data` folder.
 
-2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch experiment_name:=NAME`. This already loads the parameters used during the experiment.
+2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch name:=NAME`. This already loads the parameters used during the experiment.
 
 If you want to have a specific information being published in a(several) topic(s), you can `ros topic YOUR_TOPIC` and hit `space` to pause the playback at the desired moment, and hit `s` to perform a tiny step on the playback. Check the terminal where you echoed the topic and take the required infromation, for instace, this procedure can be used to have a static grasp captured from the recording.
 
