@@ -18,7 +18,7 @@ echo "==========================================================================
 echo "                                        GO!!!"
 echo "============================================================================================"
 
-rosbag record -O record.bag --duration=10 cloud_stream video_stream phase_space_markers tf /flexiforce/raw_values 
+rosbag record -O record.bag --duration=10 cloud_stream video_stream phase_space_markers tf /flexiforce/raw_values /tracker_object_calib/object
 
 echo "============================================================================================"
 echo "                      DONE Recording, Experiment is finished"

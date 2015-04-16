@@ -5,7 +5,7 @@
 	<!-- #### -->
 
 	<arg name="hand_name" default="soft_hand_right"/>
-	<arg name="experiment_name" default="aa"/>
+	<arg name="name" default="extremely_cool_experiment"/>  <!-- Remember to pass this via command line -->
  
 	<!-- #### -->
 
@@ -30,9 +30,9 @@
 	<!-- #### -->
 
 	<!-- load parameters -->
-	<rosparam command="load" file="$(find pacman_wp2_db)/data/$(arg experiment_name)/$(arg experiment_name).yaml" />
+	<rosparam command="load" file="$(find pacman_wp2_db)/data/$(arg name)/$(arg name).yaml" />
 
 	<!-- rosbag play commands -->
-	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find pacman_wp2_db)/data/$(arg experiment_name)/record.bag"/>
+	<node pkg="rosbag" type="play" name="player" output="screen" args="--loop --clock $(find pacman_wp2_db)/data/$(arg name)/record.bag"/>
 
 </launch>
