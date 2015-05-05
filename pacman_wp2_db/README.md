@@ -41,9 +41,9 @@ Notes on the recorded data:
 
 ## How to play the recorded data
 
-1. Download grasp database from [here](http://131.114.31.70:8080/share.cgi?ssid=0m6oYnX). Uncompress the archives it in the `data` folder. Each subdirectory created represents a single grasp record, the name of such subdirectory is the name of the grasp that needs to be specified in the next step.
+1. Download grasp database from [here](http://131.114.31.70:8080/share.cgi?ssid=0G3K8vf&fid=0G3K8vf&ep=LS0tLQ==). Uncompress the archives it in the `data` folder. Each subdirectory created represents a single grasp record, the name of such subdirectory is the name of the grasp that needs to be specified in the next step.
 
-2. Type `roslaunch pacman_wp2_grasp_db playExperiment.launch name:=NAME`. Where `NAME` is the grasp record name you want to view. This command already loads the parameters used during the experiment.
+2. Type `roslaunch pacman_wp2_db playExperiment.launch name:=NAME`. Where `NAME` is the grasp record name you want to view. This command already loads the parameters used during the experiment.
 
 Please note that you need the [Pacman Object Database](https://github.com/pacman-project/pacman-object-database) in order to correctly visualize object meshes.
 
