@@ -36,7 +36,7 @@ You need to add them all to your catkin workspace to compile messages in the syn
 
 ### [PaCMan - WP2 Grasps](pacman_wp2_grasp_db/): Human grasping using a handled Pisa/IIT SoftHand and point cloud scene
 
-This scenario has been designed to fulfil requirements in WP2 of the [PaCMan](http://www.pacman-project.eu/) project. Check the [README](pacman_wp2_grasp_db/README.md) file to see where to download the data, how was recorded, and how can it be played back.
+This scenario has been designed to fulfil requirements in WP2 of the [PaCMan](http://www.pacman-project.eu/) project. Check the [README](pacman_wp2_db/README.md) file to see where to download the data, how was recorded, and how can it be played back.
 
 ### [IROS2015 - submitted](iros2015_grasp_db/): Human grasping using a handled Pisa/IIT SoftHand
 
